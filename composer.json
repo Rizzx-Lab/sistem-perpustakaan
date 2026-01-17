@@ -1,0 +1,22 @@
+{
+    "name": "perpustakaan/sistem-informasi",
+    "description": "Sistem Informasi Perpustakaan",
+    "type": "project",
+    "require": {
+        "php": ">=7.4",
+        "phpmailer/phpmailer": "^6.9"
+    },
+    "autoload": {
+        "files": [
+            "config/database.php",
+            "config/email.php",
+            "includes/functions.php",
+            "includes/email_functions.php"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}

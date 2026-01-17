@@ -1,0 +1,38 @@
+# .htaccess
+
+# Prevent directory listing
+Options -Indexes
+
+# Default index files
+DirectoryIndex index.php index.html
+
+# Error pages (opsional)
+ErrorDocument 404 /404.php
+ErrorDocument 403 /403.php
+
+# Protect sensitive files
+<FilesMatch "^(composer\.(json|lock)|\.env|\.git.*|nixpacks\.toml|database\.sql|.*\.log)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Protect config directory
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^config/ - [F,L]
+    RewriteRule ^vendor/ - [F,L]
+    RewriteRule ^cron/.*\.log$ - [F,L]
+</IfModule>
+
+# PHP settings
+php_value upload_max_filesize 10M
+php_value post_max_size 10M
+php_value max_execution_time 300
+php_value memory_limit 256M
+
+# Security headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>

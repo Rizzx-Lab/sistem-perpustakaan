@@ -1,0 +1,33 @@
+### **2. `.gitignore` (Root)**
+```
+# Environment
+.env
+config_local.php
+
+# Logs
+*.log
+error_log
+logs/
+cron/*.log
+
+# Uploads
+uploads/*
+!uploads/.gitkeep
+
+# Cache
+cache/
+temp/
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# Backup files
+*.bak
+*.sql.bak
