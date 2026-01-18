@@ -3,7 +3,7 @@
     "description": "Sistem Informasi Perpustakaan",
     "type": "project",
     "require": {
-        "php": ">=7.4",
+        "php": "^8.0",
         "phpmailer/phpmailer": "^6.9"
     },
     "autoload": {

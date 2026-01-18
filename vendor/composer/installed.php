@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'perpustakaan/sistem-informasi',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => 'd062b85a459b7fe4ad4382228339e6a1374d5e98',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'perpustakaan/sistem-informasi' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'd062b85a459b7fe4ad4382228339e6a1374d5e98',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

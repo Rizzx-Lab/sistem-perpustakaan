@@ -1,14 +1,15 @@
 # nixpacks.toml
 
 [phases.setup]
-nixPkgs = ["php82", "php82Extensions.mysqli", "php82Extensions.pdo", "php82Extensions.pdo_mysql", "php82Extensions.mbstring"]
+nixPkgs = ["php82", "php82Extensions.mysqli", "php82Extensions.pdo", "php82Extensions.pdo_mysql", "php82Extensions.mbstring", "php82Extensions.curl"]
 
 [phases.install]
-cmds = ["composer install --no-dev --optimize-autoloader"]
+cmds = [
+    "composer install --no-dev --optimize-autoloader --no-interaction"
+]
 
 [phases.build]
 cmds = ["echo 'Build complete'"]
 
 [start]
 cmd = "php -S 0.0.0.0:$PORT -t ."
-```
